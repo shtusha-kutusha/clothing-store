@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    background-color: rgb(233, 248, 254);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+body {
+    flex-grow: 1;
+}
+
+.header {
+    height: 80px;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.laces {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.navElements {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navItem {
+    margin: 0 25px 0 25px;
+    font-weight: 600;
+}
+
+.navItem a {
+    display: inline-block;
+    font-size: 13px;
+    text-decoration: none;
+    color: black;  
+}
+
+.navItem a:after {
+    display: block;
+    width: 0%;
+	height: 1px;
+	background-color: rgb(195, 193, 193);
+	content: "";
+    transform: translateX(15%);
+    opacity: 0;
+}
+
+.navItem a:hover:after,
+.navItem a:focus:after {
+	width: 75%;
+    opacity: 1;
+}
+
+.profileItems {
+    display: flex;
+}
+
+.profileLink {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+	height: 20px;
+    margin: 0 0 0 10px;
+}
+
+.profileLink::before {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 1px solid gray;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.profileLink:hover::before {
+    opacity: 1;
+}
+
+.profileLink-notification::after {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    display: block;
+    box-sizing: border-box;
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: red;
+    border-radius: 50%;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.productHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.photoProduct {
+    margin: 25px 0 25px 0;
+    cursor: pointer;
+}
+
+.product {
+    margin: 0 100px;
+}
+
+.productGallery {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.photoProduct {
+    margin: 15px 0;
+    padding: 0;
+}
+
+.productGalleryLink {
+    position: relative;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgb(147, 145, 145);
+    text-indent: -10000px;
+}
+
+.productGalleryLink::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgb(147, 145, 145);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.productGalleryLink-active::before,
+.productGalleryLink:hover::before {
+    opacity: 1;
+}
+
+.productImage {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.arrowBack {
+    position: absolute;
+    top: 100px;
+    margin: 0 170px 0 0;
+    width: 40px;
+    height: 25px;
+    cursor: pointer;   
+    
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.arrowBack::before,
+.arrowBack::after {
+    content: '';
+    position: absolute;
+}
+
+.arrowBack::before {
+    width: 33px;
+    height: 2px;
+    background-color: black;
+    top: 10px;
+}
+
+.arrowBack::after {
+    width: 14px;
+    height: 14px;
+}
+
+.arrowBack::after {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    transform: rotate(-45deg);
+    top: 3px;
+    left: 2px; 
+}
+
+.arrowForward {
+    position: absolute;
+    display: flex;
+    width: 40px;
+    height: 20px;
+    top: 50%;
+    right: 80px;
+    margin: -10px 0 0 0;
+    text-indent: -10000px;
+}
+
+.arrowForward::before,
+.arrowForward::after {
+    content: '';
+    position: absolute;
+}
+
+.arrowForward::before {
+    width: 33px;
+    height: 3px;
+    background-color: black;
+    top: 8px;
+}
+
+.arrowForward::after {
+    width: 10px;
+    height: 10px;
+}
+
+.arrowForward::after {
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: rotate(135deg);
+    top: 3px;
+    left: 19px; 
+}
+
+.featuresProduct {
+    margin: 25px 0 0 0;
+    display: flex;
+}
+
+.featureHeader {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.color { 
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.color li {
+    margin: 0 10px 0 0;
+}
+
+.colorButton {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    text-indent: -10000px;
+}
+
+.colorButton::before {
+    content: '';
+    position: absolute;
+    top: 49%;
+    left: 49%;
+    margin: -10px 0 0 -10px; 
+    display: block;
+    box-sizing: border-box;
+    width: 21px;
+    height: 21px;
+    border: 1px solid rgb(147, 145, 145);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.colorButton-active::before,
+.colorButton:hover::before {
+    opacity: 1;
+}
+
+
+.size {  
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-self: flex-end;
+}
+
+.size li {
+    margin: 0 10px 0 0;
+}
+
+.sizeButton {
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+    color: gray;
+    background-color: rgb(233, 248, 254);
+    border-radius: 50%;
+    padding: 0;
+    font-size: 12px;
+}
+
+.sizeButton:hover,
+.sizeButton-active {
+    color: black;
+}
+
+.sizeProduct {
+    margin: 0 0 0 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chooseSize {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    text-decoration: none;
+    color: gray;
+}
+
+.sizeNumber {
+    font-weight: 500;
+    position: relative;
+    top: 4.5px;
+    left: 5px;
+    font-size: 9px;
+}
+
+.description {
+    margin: 0 120px 0 0;
+}
+
+.description ul {
+    list-style-type: none;
+}
+
+.modelName {
+    font-weight: 600;
+    font-size: 35px;
+    margin: 0 0 40px 0;
+}
+
+.descriptionProduct {
+    max-width: 400px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color:rgb(147, 145, 145);
+}
+
+article ul {
+    padding: 0;
+}
+
+.deliveryTerms {
+    text-decoration: none;
+    margin: 30px 0 0 0;
+    color:rgb(170, 167, 167);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.deliveryTerms li {
+    margin: 25px 0 0 0;
+}
+
+.itemsTerms > div{
+    margin: 0 0 25px 0;
+    color:rgb(196, 191, 191);
+    font-size: 12px;
+    word-spacing: 3px;
+    letter-spacing: 0;
+}
+
+.deliveryTermsArrow {
+    height: 10px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer; 
+}
+
+.deliveryTermsArrow::before,
+.deliveryTermsArrow::after {
+    content: '';
+    position: absolute;
+}
+
+.deliveryTermsArrow::before {
+    width: 10px;
+    height: 2px;
+    transform: rotate(135deg);
+    background-color: black;
+    top: 5px;
+}
+
+.deliveryTermsArrow::after {
+    width: 5px;
+    height: 5px;
+}
+
+.deliveryTermsArrow::after {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    transform: rotate(90deg);
+    top: 1px;
+    left: 3px; 
+}
+
+.deliveryText {
+    padding: 0 0 0 20px;
+}
+
+.footer {
+    height: 70px;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.model {
+    font-size: 13px;
+    letter-spacing: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.model a {
+    text-decoration: none;
+    color: black;
+}
+
+.model a:not(:first-child) {
+    padding: 0 0 0 25px;
+}
+
+.priceProduct {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin: 15px 0 0;
+    display: flex;
+    align-items: center;
+    transform: translateX(-50%);
+}
+.price {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.priceValue {
+    font-weight: 500;
+    font-size: 25px;
+    margin: 0 0 0 20px;
+}
+
+.buttons {
+    position: absolute;
+    top: 100%;
+    right: 80px;
+    margin: 15px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.buttonLike {
+    border: none;
+    background-color: rgb(233, 248, 254);
+    margin: 0 25px 0 0;
+    cursor: pointer;
+}
+
+.buttonLike-active {
+    transform: scale(1.5);
+}
+
+.buttonAdd {
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 13px;
+    font-weight: 700;
+}

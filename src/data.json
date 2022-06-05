@@ -1,0 +1,16 @@
+{
+    "name": "Nike Jordan",
+    "description": "Speed is not Russell Westbrook's secret weapon. He bypasses opponents, creating momentum and overcoming everething on the way to the ring",
+    "price": 39.90,
+    "colors": ["yellow", "rgb(155, 194, 246)", "rgb(93, 230, 93)"],
+    "sizes": [39, 40, 41],
+    "like": true,
+    "gallery": [
+        "img/nike-jordan.jpg",
+        "img/2.jpg",
+        "img/3.jpg",
+        "img/4.jpg",
+        "img/5.png",
+        "img/6.png"
+    ]
+}
